@@ -1,3 +1,7 @@
+html {
+	position: relative;
+	min-height: 100%
+}
 page {
 	overflow: scroll;
 }
@@ -192,22 +196,24 @@ h1 {
 	color: #031424;
 	font-size: 20px;
 	font-family: 'Josefin Sans', sans-serif;
-	width: 50%;
+	width: 97%;
 	padding-bottom: 25px;
 	border-radius: 5px;
-	padding-left: 5px;
+	padding-left: 2%;
 	padding-right: 10px;
 	
 }
 .aboutme h2 {
+	text-align: center;
 	font-family: 'Barrio', cursive;
 	font-size: 60px;
 	color: #031424;
 }
 
 .about p {
+	text-align: center;
 	color: #031424;
-	font-size: 20px;
+	font-size: 30px;
 	font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -349,7 +355,7 @@ h1 {
 	left:  0;
 	right: 0;
 	bottom: 0;
-	top: 0;
+	top: 150;
 	background-repeat: no-repeat;
 	margin: auto;
 }
@@ -364,6 +370,167 @@ h1 {
 	color: white;
 	font-size: 30px;
 	font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer {
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
+}
+
+.facebook {
+	display: inline block;
+	float: left;
+	position: relative;
+	top: 400px;
+	line-height: 30px;
+	background-color: white;
+	color: #031424;
+	font-size: 20px;
+	font-family: 'Josefin Sans', sans-serif;
+	width: 50%;
+	padding-bottom: 25px;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+.smallbox1 {
+	display: block;
+	background: white;
+	color: black;
+	 transition: all .05s ease-in-out;
+}
+
+.smallbox1 div {
+	border-radius: 20px;
+    width: 5%;
+	 width: 5vw;
+    height: 5vw;
+    background-color: white;
+	color: #30415D;
+    float: left;
+	margin-left: 20px;
+	margin-left: 1vw;
+	margin-right: 10px;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 5px;
+	font-size: 1vw;
+}
+
+.smallbox1:hover {
+	transform: scale(1.05);
+}
+
+
+.smallbox2 {
+	 background-color: #30415D;
+	 color: white;
+	  transition: all .05s ease-in-out;
+}
+.smallbox2 div {
+    width: 5%;
+	width: 5vw;
+    height: 5vw;
+	border-radius: 20px;
+    background-color: #30415D;
+	color: #ffff99;
+    float: left;
+	margin-left: 10px;
+	margin-left: 1vw;
+	margin-right: 10px;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 5px;
+	font-size: 1vw;
+}
+.smallbox2:hover {
+	transform: scale(1.05);
+}
+
+.smallbox3 {
+	 background-color: #CF6766;
+	 color: #30415D;
+	   transition: all .05s ease-in-out;
+}
+
+.smallbox3 div {
+    width: 5%;
+	width: 5vw;
+    height: 5vw;
+	border-radius: 20px;
+    background-color: #CF6766;
+	color: #30415D;
+    float: left;
+	margin-left: 10px;
+	margin-left: 1vw;
+	margin-right: 10px;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 5px;
+	font-size: 1vw;
+}
+
+.smallbox3:hover {
+	transform: scale(1.05);
+}
+
+.smallbox4 {
+	background-color: #8EAEBD;
+	color: #30415D;
+	   transition: all .05s ease-in-out;
+}
+
+
+a.smallbox4 div {
+    width: 5%;
+	width: 5vw;
+    height: 5vw;
+	border-radius: 20px;
+    background-color: #8EAEBD;
+	color: #30415D;
+    float: left;
+	margin-left: 10px;
+	margin-left: 1vw;
+	margin-right: 10px;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 5px;
+	font-size: 1vw;
+}
+.smallbox4:hover {
+	transform: scale(1.05);
+}
+
+.smallbox5 {
+	background-color: white;
+	color: #CF6766;
+	  transition: all .05s ease-in-out;
+}
+
+.smallbox5 div {
+    width: 5%;
+	width: 5vw;
+    height: 5vw;
+	border-radius: 20px;
+    background-color: #ffff99;
+	color: #031424;
+    float: left;
+	margin-left: 10px;
+	margin-left: 1vw;
+	margin-right: 10px;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 5px;
+	font-size: 1vw;
+}
+
+.smallbox5:hover {
+	transform: scale(1.05);
 }
 
 

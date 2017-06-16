@@ -1,3 +1,20 @@
+<?php
+// blog page
+$ch = curl_init("https://api.dropinblog.com/v1/html/?b=QKNW1LXFEFUXVD0BBXE2&c=".$_GET['c']."&p=".$_GET['p']."&page=".$_GET['page']);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+$dib = json_decode($response);
+?>
+<?php
+// recent
+$ch = curl_init("https://api.dropinblog.com/v1/html/recentposts/?b=QKNW1LXFEFUXVD0BBXE2&num=4");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+$dib_recent = json_decode($response);
+?>
+
 <html class="page">
 <?php 
 define('WP_USE_THEMES', false);
@@ -21,15 +38,38 @@ require('blog/wordpress/wp-blog-header.php'); ?>
 		<div id="myAnimation"> </div>
 	  </div>
       <title> Projects</title>
+	  <section class="navcontainer">
+         <a  class="smallbox1" style="display:block" href="#about">
+            <div>
+               <h2> About Me</h2>
+            </div>
+         </a>
+         <a class="smallbox2" style="display:block" href="/contact">
+            <div>
+               <h2> Contact</h2>
+            </div>
+         </a>
+         <a class="smallbox3" style="display:block" href="/resume">
+            <div>
+               <h2> Resume</h2>
+            </div>
+         </a>
+         <a class="smallbox4" style="display:block" href="/projects">
+            <div>
+               <h2> Projects</h2>
+            </div>
+         </a>
+         <a class="smallbox5" style="display:block" href="/blog.html">
+            <div>
+               <h2> Blog</h2>
+            </div>
+         </a>
+      </section>
       <a href="index" style="text-decoration:none"><h1> Gauri Ramesh</h1></a>
       <br> </br>
    </head>
-   <body>
-   <script>
-      function handleResponse(response) {
-        document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
-      }
-    </script>
+   <body style="margin:0; width: 100%; height: 100%">
+ 
     <script
     src="https://www.googleapis.com/blogger/v3/blogs/byurl?url=http://gauriramesh.blogspot.com"></script>
 	<div class="blog" id="blog"> 
@@ -39,6 +79,10 @@ require('blog/wordpress/wp-blog-header.php'); ?>
 <noscript>
 <a href="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fgaurirameshblog.wordpress.com%2Ffeed%2F&chan=y&au=y&date=y&utf=y&css=style.css&html=y">View RSS feed</a>
 </noscript></div>
+<?php echo $dib->data->content ?>
+<?php echo $dib->data->headTitle ?>
+<?php echo $dib->data->headDescription ?>
+<?php echo $dib_recent->data->content ?>
 	 </div>
    </body>
 </html>
