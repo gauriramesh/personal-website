@@ -11,6 +11,7 @@ $(document).ready(function() {
 	});
 });
 
+/*
 $(document).ready(function() {
 	var elem = document.getElementById("myAnimation"); 
     var pos = 0;
@@ -26,6 +27,7 @@ $(document).ready(function() {
         }
     }
 });
+*/
 
 /* $(document).ready(function() {
     $("body").css("display", "none");
